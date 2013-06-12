@@ -14,6 +14,36 @@
 					tolerance: "pointer"
 				});
 			});
+
+		function change(para){
+				switch (para){
+					case 1:
+						var temptitle = prompt("Enter the name of your new friend list");
+						
+						if(temptitle){
+				
+							FB.api('me/friendlists', 'post', {name: temptitle}, function(res){
+				
+								var i = GroupID.length;
+						
+								GroupID[i+1] = res.id;
+					
+								$("<div><h1>" + temptitle + "</h1><ul class='sortFB connectSort' id='"+ res.id +"'></ul></div>").appendTo("#GroupList");
+				
+								getMembers(i);//start to display the existent members in the existent lists.
+				
+							});
+						}else{
+						
+							alert("Null list name is not allowed, please check again.");
+							
+						}
+					break;
+					case 2:
+						
+					break;
+				}
+			}
 		</script>
 
 
