@@ -33,8 +33,7 @@ body {
 .albshow{
 width: 940px;
 height: 700px;
-opacity: 0;
-
+background-color:white;
 }
 
 .layout-grid {
