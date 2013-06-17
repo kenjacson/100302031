@@ -31,10 +31,11 @@ body {
 }
 
 .albshow{
-width: 940px;
+width: 920px;
+padding:20px;
 height: 720px;
 background-color: #FFFFFF;
-margin-left: 10px;
+
 }
 
 .layout-grid {
